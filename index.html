@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trương Quốc Huy - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Trương Quốc Huy</div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Trương Quốc Huy</h1>
+                    <p class="hero-subtitle">Công Nghệ Thông Tin & Đồ Họa Kỹ Thuật Số</p>
+                    <p class="hero-description">
+                        Đang làm thiết kế đồng phục, thích ăn uống và khám phá những trải nghiệm mới. 
+                        Passionate về thiết kế và sáng tạo.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Liên hệ</a>
+                        <a href="#about" class="btn btn-secondary">Tìm hiểu thêm</a>
+                    </div>
+                </div>
+                <div class="hero-avatar">
+                    <div class="avatar-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Dự Án & Album</h2>
+            <p class="gallery-subtitle">Tuyển tập những tác phẩm, dự án và những khoảnh khắc yêu thích</p>
+            
+            <!-- Filter Buttons -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Tất Cả</button>
+                <button class="filter-btn" data-filter="projects">Dự Án</button>
+                <button class="filter-btn" data-filter="food">Ẩm Thực</button>
+                <button class="filter-btn" data-filter="design">Thiết Kế</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Projects -->
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Dự+Án+1" alt="Dự án 1">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Thiết Kế Đồng Phục</h3>
+                    <p>Dự án thiết kế đồng phục chuyên nghiệp</p>
+                </div>
+
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Dự+Án+2" alt="Dự án 2">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Brand Identity</h3>
+                    <p>Hệ thống nhận diện thương hiệu</p>
+                </div>
+
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Dự+Án+3" alt="Dự án 3">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Web UI Design</h3>
+                    <p>Thiết kế giao diện website</p>
+                </div>
+
+                <!-- Food -->
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Quán+1" alt="Ẩm thực 1">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Quán Ăn Truyền Thống</h3>
+                    <p>Ẩm thực Việt chất lượng cao</p>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Quán+2" alt="Ẩm thực 2">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Cafe Hiện Đại</h3>
+                    <p>Không gian yên tĩnh, thực phẩm tươi</p>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Quán+3" alt="Ẩm thực 3">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Buffet Nướng</h3>
+                    <p>Thịt tươi, nhiều lựa chọn</p>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Quán+4" alt="Ẩm thực 4">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Lẩu Thái Lan</h3>
+                    <p>Vị cay, hương thơm đặc biệt</p>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Quán+5" alt="Ẩm thực 5">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Cơm Tấm Sài Gòn</h3>
+                    <p>Bình dân, ngon, giá hợp lý</p>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Quán+6" alt="Ẩm thực 6">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Phở Hà Nội</h3>
+                    <p>Hương vị truyền thống, đậm đà</p>
+                </div>
+
+                <!-- Design -->
+                <div class="gallery-item" data-category="design">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Thiết+Kế+1" alt="Thiết kế 1">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Poster Design</h3>
+                    <p>Thiết kế poster sáng tạo</p>
+                </div>
+
+                <div class="gallery-item" data-category="design">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Thiết+Kế+2" alt="Thiết kế 2">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Logo Design</h3>
+                    <p>Thiết kế logo chuyên nghiệp</p>
+                </div>
+
+                <div class="gallery-item" data-category="design">
+                    <div class="gallery-image">
+                        <img src="https://via.placeholder.com/300x300/2ecc71/ffffff?text=Thiết+Kế+3" alt="Thiết kế 3">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" onclick="openGalleryModal(this)">👁️ Xem</button>
+                        </div>
+                    </div>
+                    <h3>Packaging Design</h3>
+                    <p>Thiết kế bao bì sản phẩm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+        <span class="gallery-modal-close" onclick="closeGalleryModal()">&times;</span>
+        <img id="galleryModalImage" class="gallery-modal-image" src="" alt="Gallery image">
+        <div class="gallery-modal-nav">
+            <button class="gallery-modal-prev" onclick="prevGalleryImage()">❮</button>
+            <button class="gallery-modal-next" onclick="nextGalleryImage()">❯</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Về Tôi</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    Tôi là một chuyên gia trong lĩnh vực thiết kế đồ họa kỹ thuật số với niềm đam mê sáng tạo 
+                    và tìm tòi những ý tưởng mới. Hiện tại, tôi đang tập trung vào thiết kế đồng phục và 
+                    các dự án liên quan đến định danh thương hiệu.
+                </p>
+                <p class="about-text">
+                    Ngoài công việc, tôi yêu thích khám phá ẩm thực, tìm tòi những quán ăn mới và thưởng thức 
+                    các món ăn đặc sắc. Đó cũng là nguồn cảm hứng cho những thiết kế của tôi - sự kết hợp 
+                    giữa tính sáng tạo và cảm nhận thực tế.
+                </p>
+                <p class="about-text">
+                    Tôi tin rằng thiết kế tốt không chỉ đẹp về hình thức mà còn phải có ý nghĩa và 
+                    giải quyết được các vấn đề thực tế của người dùng.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Kỹ Năng</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-title">Thiết Kế Đồ Họa</h3>
+                    <p class="skill-description">
+                        Tạo các thiết kế hình ảnh chuyên nghiệp, từ logo đến hệ thống thiết kế toàn diện.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">✨</div>
+                    <h3 class="skill-title">UI/UX Design</h3>
+                    <p class="skill-description">
+                        Thiết kế giao diện người dùng hiện đại, thân thiện và dễ sử dụng.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🖼️</div>
+                    <h3 class="skill-title">Photoshop & Illustrator</h3>
+                    <p class="skill-description">
+                        Làm việc thành thạo với các công cụ thiết kế chuyên nghiệp hàng đầu.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💡</div>
+                    <h3 class="skill-title">Tư Duy Sáng Tạo</h3>
+                    <p class="skill-description">
+                        Phát triển ý tưởng độc đáo và giải pháp sáng tạo cho các dự án.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Liên Hệ</h2>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    Bạn có dự án hoặc muốn hợp tác? Hãy liên hệ với tôi qua các kênh dưới đây!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:huytruong@example.com" class="contact-link">
+                        <span class="contact-icon">✉️</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="contact-link">
+                        <span class="contact-icon">👤</span>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="contact-link">
+                        <span class="contact-icon">💻</span>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Trương Quốc Huy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
